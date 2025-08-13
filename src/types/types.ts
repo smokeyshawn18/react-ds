@@ -24,3 +24,17 @@ export type cartSummary = {
   discount: number;
   total: number;
 };
+
+export type Department = {
+  id: string;
+  name: string;
+};
+
+export type User = {
+  id: number;
+  name: string;
+  email: string;
+  department: string;
+  lastLogin: string;
+  role: string;
+};

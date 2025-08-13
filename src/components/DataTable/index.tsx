@@ -2,16 +2,7 @@ import { useState } from "react";
 import type { User } from "../../interfaces/interfaces";
 import type { Column } from "../../interfaces/dataTableInterface";
 import DataTable from "./DataTable";
-
-const usersData: User[] = [
-  { id: 1, name: "Alice", email: "alice@example.com", role: "Admin" },
-  { id: 2, name: "Bob", email: "bob@example.com", role: "User" },
-  { id: 3, name: "Charlie", email: "charlie@example.com", role: "User" },
-  { id: 4, name: "David", email: "david@example.com", role: "Moderator" },
-  { id: 5, name: "Eve", email: "eve@example.com", role: "User" },
-  { id: 6, name: "Frank", email: "frank@example.com", role: "User" },
-  { id: 7, name: "Grace", email: "grace@example.com", role: "Admin" },
-];
+import { users } from "../../data/users";
 
 const columns: Column<User>[] = [
   { key: "name", label: "Full Name", sortable: true },
@@ -22,7 +13,7 @@ const columns: Column<User>[] = [
 export default function Index() {
   const [page, setPage] = useState(1);
   const pageSize = 3;
-  const total = usersData.length;
+  const total = users.length;
 
   // Sorting handler - you can enhance this to sort your actual data.
   // For demo, we'll just log the sort key and direction
@@ -37,8 +28,8 @@ export default function Index() {
 
   return (
     <div className="p-4">
-      <DataTable<User>
-        data={usersData}
+      <DataTable
+        data={users}
         columns={columns}
         onSort={handleSort}
         pagination={{ page, pageSize, total }}

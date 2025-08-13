@@ -1,4 +1,4 @@
-import type { SortDirection } from "../interfaces/dataTableInterface";
+type SortDirection = "asc" | "desc";
 
 export function sortData<T extends Record<string, any>>(
   data: T[],

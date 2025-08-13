@@ -11,12 +11,15 @@ const linkActive = "text-white bg-gray-900 dark:bg-white dark:text-gray-900";
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/task1", label: "Task1" },
+  // Routes name is according to the Task question sequence
+  { to: "/task1.1", label: "Task1.1" },
+  { to: "/task1.2", label: "Task1.2" },
+  { to: "/task1.3", label: "Task1.3" },
   { to: "/task2", label: "Task2" },
   { to: "/task3", label: "Task3" },
-  { to: "/task4", label: "Task4" },
 ];
 
+// We can do without React.FC also but it is better to give type to the Component also
 const NavBar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -36,7 +39,7 @@ const NavBar: React.FC = () => {
         <div className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-2xl bg-gray-900 dark:bg-white" />
           <span className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
-            YourApp
+            React Data Saturn
           </span>
         </div>
 

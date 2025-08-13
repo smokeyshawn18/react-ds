@@ -1,6 +1,7 @@
 // src/components/DataTable/hooks/useSort.ts
 import { useState, useCallback } from "react";
-import type { SortDirection } from "../interfaces/dataTableInterface";
+
+type SortDirection = "asc" | "desc";
 
 export function useSort(
   initialKey: string | null = null,
