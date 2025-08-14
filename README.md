@@ -3,5 +3,3 @@
 # Live Demo Link - https://react-ds.vercel.app
 
 # This project is dockerized so you can easily compose and run the app inside container
-
-# Docker Container - http://localhost:3000
